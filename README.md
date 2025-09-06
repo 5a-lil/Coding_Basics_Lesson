@@ -1,5 +1,6 @@
 ### Before reading
 This lesson is pretending that you are on a MacOS or UNIX type OS.
+Throughout the course if it isn't specified, all code instructions are in an imaginary coding language cooked by me, don't assimilate it to anything.
 When your read the lessons if something appears weird and not clear to you, don't panic it will come with time. 
 If you think you skipped something, don't go back go forward.
 DON'T GO BACK EVER EVER EVER !
@@ -10,7 +11,7 @@ Before doing anything, what is coding ? Coding is writing text instructions in a
 
 **def**: 
 - instructions: things you tell the computer to do, like printing, changing things etc ...
-- compile: turn your code to machine language, ex:  print("something") = "machine language that tells to display 'hello' on the screen"  like binary or just no humanly readable characters. It is in some cases stored in a binary file.
+- compile: turn your code to machine language, ex:  display("something") = "machine language that tells to display 'hello' on the screen"  like binary or just no humanly readable characters. It is in some cases stored in a binary file.
 ### Before starting
 I'm gonna teach you some little terms and things to know and understand.
 
@@ -189,3 +190,13 @@ $ ls                             (check the files in the cwd)
 some files                       (the directory A_Directory has been successfully removed)
 $ new empty line
 ```
+
+### Coding mandatory notions
+How do we code now ? To start coding you need some basic knowledge to then transform your ideas into real code.
+- **Functions:** a function is a block of code that executes all of the instructions contained in the block.
+
+```python
+print("I will code")
+```
+
+This is a call to the 'print()' function of python, but we didn't code the function, it was already coded so we don't have access to the block of instructions
