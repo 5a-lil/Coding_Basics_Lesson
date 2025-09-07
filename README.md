@@ -192,11 +192,135 @@ $ new empty line
 ```
 
 ### Coding mandatory notions
-How do we code now ? To start coding you need some basic knowledge to then transform your ideas into real code.
-- **Functions:** a function is a block of code that executes all of the instructions contained in the block.
+How do we code now ? To start coding you need some basic knowledge to then transform your ideas into real code throughout mastered concepts of code.
+
+**Functions:** a function is a block of code that executes all of the instructions contained in the actual block.
+
+- ex in python of a builtin function:
 
 ```python
 print("I will code")
 ```
 
-This is a call to the 'print()' function of python, but we didn't code the function, it was already coded so we don't have access to the block of instructions
+- ex in python of a "homemade" function:
+
+```python
+# we define our function
+def print_value_plus_one(value): # 'value' is called a parameter
+	print(value + 1)
+
+print_value_plus_one(0) # '0' is called the argument of the func call
+```
+
+This is a call to the 'print()' function of python, but we didn't code the function, it was already coded so we don't have access to the block of instructions, but in the second example we coded our own function and the call to it displays 1 in the terminal.
+
+---
+
+**Syntax:** when you code you obviously choose a programming language (python, c, rust...), and each of those languages has its own syntax, you write with a unique way for each language, let's make a printA function that actually prints A in the terminal with 3 languages.
+
+- ex in python:
+
+```python
+def printA():
+	print("A")
+```
+
+- ex in c:
+
+```c
+void printA()
+{
+	write(1, "A", 1);
+}
+```
+
+- ex in lua:
+
+```lua
+function printA()
+	print("A")
+end
+```
+
+You see that each language has a different way to write functions with their block of instructions, that is a syntax demonstration, each language has its own way to write code.
+
+---
+
+**Variables:** a variable is a space dedicated to containing a piece of data, ex: a variable named 'var' contains the number 2, print(var) = 2 is printed.
+
+- ex in python:
+
+```python
+var = 7
+print(var)
+```
+
+- ex in c:
+
+```c
+int main()
+{
+	int var = 7;
+	printf("%d\n", var);
+}
+```
+
+- ex in lua:
+
+```lua
+var = 7
+print(var)
+```
+
+---
+
+**Comments:** comments are used to write text in your code without being interpreted by the compiler, it is ignored by everything.
+
+- ex in python:
+
+```python
+# the call to this function displays A in the terminal
+print("A")
+```
+
+- ex in c:
+
+```c
+int main()
+{
+	// nothing is done here
+}
+```
+
+- ex in lua:
+
+```lua
+var = 1
+-- this function adds one to the var variable
+function add_one_to_var()
+	var = var + 1
+end
+-- normally we should see 1 then 2 displayed in the terminal
+print(var)
+add_one_to_var()
+print(var)
+```
+
+---
+
+**Arguments and Parameters:** i will illustrate this with an example, if i want to go on a jog outside i need to wear shoes, the shoes are the parameter, now if i go jog outside with some nike shoes, the nike shoes are the argument, the difference is really subtle. For example functions can have parameters and when you call those function you need to list an argument for each parameter to have.
+
+- ex in python:
+
+```python
+# num_param and text_param are parameters
+def ex_func(num_param, text_param):
+	print(num_param)
+	print(text_param)
+	
+# 77 and "Meaux" are arguments of the function call of ex_func
+ex_func(77, "Meaux")
+```
+
+---
+
