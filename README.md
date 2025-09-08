@@ -25,13 +25,11 @@ I'm gonna teach you some little terms and things to know and understand.
 - file extensions: any .something extension after a file name is just literal, it doesn't do anything to the file, the thing to remember for now is that you need file extensions for mostly compilers, because a compiler will always inspect if the file contains actually the good language to compile and that's the literal role of a file extension. Because compiling something that you cannot understand doesn't make any sense.
 
 Now lets go through some shell basics you'll nearly use every time while coding and to test. First open a shell, so now you're on an interface like this: 
-
 ```bash
 $ you type commands here
 ```
 
 Now what are commands ? Commands are executable files that do things, like displaying in which directory you currently are, ex: execute the 'pwd' command:
-
 ```bash
 $ pwd
 /your/current/working/directory
@@ -39,13 +37,11 @@ $ new empty line
 ```
 
 The thing is that through shell you can do a lot of things like move to a directory/bin, copy data, but mostly you can compile files by using some respective commands for each existent compiler that you have installed. When you are in a shell as you saw with the 'pwd' command your are by default in the directory where you opened the shell, but you can change of current working directory with the 'cd' command:
-
 ```
 $ cd <paths to new working directory>
 ```
 
 ex: 
-
 ```
 $ cd ./file
 $ pwd
@@ -59,31 +55,26 @@ $ new empty line
 Lets start with brief and mandatory explanations.
 
 Look at this code:
-
 ```python
 print("Hello i want to code")
 ```
 
 This file is actually coded in python language, actually this fact doesn't interest us, what is interesting is how do we execute it ? To execute the code as i said in the intro you need to compile it, so you need a compiler. Each language has its own ones, in C there is 'gcc', in C++ its 'g++' and in python it is 'python'. If you want to compile some files, in most of the time you do this in a shell:
-
 ```
 $ execute_compiler_command <files to compile>
 ```
 
 So in the python example above we would do:
-
 ```
 $ python <the name of the file>
 ```
 
 Mostly when coding, you code of course in a file, and the name of the file is:
-
 ```
 any_name.(language extension, c for C, cpp for C++, py for python...)
 ```
 
 You need the file extension to say to the compiler that "this file is a script written in a certain language". We will name our file main.py, so to compile it you will do:
-
 ```
 $ python main.py
 Hello i want to code
@@ -92,7 +83,6 @@ $ new empty line
 
 The thing is that we compiled the file so the computer can understand it but why do we have an output: "Hello i want to code" ? This is a special case because python compiler 'python' not only compiles files but it also executes them at the same time.
 Now we are gonna compile a C coding language file with the compiler 'gcc' to really see a difference; lets make a main.c file:
-
 ```c
 int main()
 {
@@ -101,14 +91,12 @@ int main()
 ```
 
 Now lets compile the main.c file:
-
 ```bash
 $ gcc main.c
 $ new empty line
 ```
 
 As you can see there is just a new line but nothing got written, its because gcc really just compiled the file into "computer understandable" language. If we launch the 'ls' command in the current working directory we'll see this:
-
 ```bash
 $ ls
 main.c a.out
@@ -116,7 +104,6 @@ $ new empty line
 ```
 
 'ls' command lists all the files in the current working directory, so there is the main.c but why is there a "a.out" file ? All you need to know for now is that the a.out file is the binary, compiled file; and now if we execute it we'll see:
-
 ```bash
 $ ./a.out
 Hello i want to code
@@ -124,12 +111,10 @@ $ new empty line
 ```
 
 So in this section you learnt how to compile and execute your code and that's awesome because you can actually start coding ! But before that lets deep again in more shell basics and habits that you use often while coding.
-
 ### Shell quick practice
 Lets see some useful scenarios that might happen.
 
 - Imagine you want to create a My_Proj folder for your project and create a main.lua file in it:
-
 ```
 $ pwd                            (check the cwd)
 /cwd
@@ -147,7 +132,6 @@ $ new empty line
 ```
 
 - Now let's say you want to delete a certain file named target.aim in a directory named To_Trash:
-
 ```
 $ pwd                            (check the cwd)
 /cwd 
@@ -162,7 +146,6 @@ $ new empty line
 ```
 
 - Finally another could be that you want to see the content of a file in a shell:
-
 ```
 $ pwd                            (check the cwd)
 /cwd
@@ -178,7 +161,6 @@ $ new empty line
 ```
 
 - Bonus: did you know that commands can have flags, ex: '-f':
-
 ```
 $ pwd                            (check the cwd)
 /cwd
@@ -290,7 +272,16 @@ ex_var = 77 # we changed the value here
 print(ex_var)
 ```
 
-You should see '93' and then '77' displayed in terminal.
+You should see '93' and then '77' displayed in terminal. Alright this is all good but now let's talk about a special variable type, arrays. An array is a list of variables; strings, numbers, booleans, whatever type you want, but it must contain elements of the same type only.
+
+ex in python:
+```python
+ex_array = [0, 2, 4] # this is an array.
+# indexes:  0  1  2
+print(ex_array[1]) # it will display '2' in the terminal
+```
+
+As you can see, array elements are principally accessed by indexes and the first index is not 1 but it is 0.
 
 ---
 **Syntax:** when you code you obviously choose a programming language (python, c, rust...), and each of those languages has its own syntax, you write with a unique way for each language, let's make a printA function that actually prints A in the terminal with 3 languages.
@@ -375,17 +366,38 @@ As you may imagine, "ex_var is superior of equal to 75" will be displayed in the
 ex in python:
 ```python
 ex_var = 2
-if ex_var == 0 :
+if ex_var == 0 : # case of ex_var equal to 0
 	print("ex_var is equal to 0")
-elif ex_var == 1 :
+elif ex_var == 1 : # case of ex_var equal to 1
 	print("ex_var is equal to 1")
-elif ex_var == 2 :
+elif ex_var == 2 : # case of ex_var equal to 2
 	print("ex_var is equal to 2")
-else :
+else : # case of ex_var different from 0, 1 and 2
 	print("ex_var doesn't match any wanted cases")
 ```
 
 Here you can see how we can for example manage multiple cases with if/else statements (elif = else if). The actual program will display "ex_var is equal to 2".
 
 ---
+**Loops:** loops permit you to repeat instructions while a condition is true.
 
+ex in python of 'while loops':
+```python
+ex_var = 0
+while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
+	print(ex_var)
+	ex_var = ex_var + 1 # increment i by one
+```
+
+Here you will see '0', '1', '2', '3' and '4' displayed in the terminal. Now let's jump into another type of loops:
+
+ex in c of 'for loops':
+```python
+ex_var = -78
+for ex_var in range(5)
+	print(ex_var)
+```
+
+You should see the same output as before in the terminal, but why ? For loops are special but not hard to understand at the same time, in the example above we say for each value of 'ex_var' reinitialized at 0 at the beginning between 0 and 4, we execute the block of instructions of the for loop, actually it was displaying the value of 'ex_var' in the terminal.
+
+--- 
