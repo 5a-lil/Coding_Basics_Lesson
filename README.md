@@ -4,6 +4,7 @@ Throughout the course if it isn't specified, all code instructions are in an ima
 When your read the lessons if something appears weird and not clear to you, don't panic it will come with time. 
 If you think you skipped something, don't go back go forward.
 DON'T GO BACK EVER EVER EVER !
+It is recommended to start with the python language to exercise yourself.
 ### Topic
 In this lesson you will learn basics needed to learn any language or just start coding in general.
 ### Brief intro
@@ -192,18 +193,38 @@ $ new empty line
 ```
 
 ### Coding mandatory notions
-How do we code now ? To start coding you need some basic knowledge to then transform your ideas into real code throughout mastered concepts of code.
+How do we code now ? To start coding you need some basic knowledge to then transform your ideas into real code.
 
+**Comments:** comments are used to write text in your code without being interpreted by the compiler, it is ignored by everything.
+
+- ex in python:
+```python
+# this is the python way to make comments in a script
+print("A")
+```
+
+- ex in c:
+```c
+int main()
+{
+	// this is the c way to make comments in a script
+}
+```
+
+- ex in lua:
+```lua
+-- this is the lua way to make comments in a script
+```
+
+---
 **Functions:** a function is a block of code that executes all of the instructions contained in the actual block.
 
 - ex in python of a builtin function:
-
 ```python
-print("I will code")
+print("I will code") # this is a call to the print func
 ```
 
 - ex in python of a "homemade" function:
-
 ```python
 # we define our function
 def print_value_plus_one(value): # 'value' is called a parameter
@@ -212,21 +233,75 @@ def print_value_plus_one(value): # 'value' is called a parameter
 print_value_plus_one(0) # '0' is called the argument of the func call
 ```
 
-This is a call to the 'print()' function of python, but we didn't code the function, it was already coded so we don't have access to the block of instructions, but in the second example we coded our own function and the call to it displays 1 in the terminal.
+This is a call to the 'print()' function of python, but we didn't code the function, it was already coded so we don't have access to the block of instructions, but in the second example we coded our own function and the call to it displays 1 in the terminal. Note that functions can have a number of parameters balancing between 0 and a lot.
+
+- ex in python of a possible compile error:
+```python
+def print_two_words(word1, word2):
+	print(word1) # prints the first parameter
+	print(word2) # prints the second parameter
+	
+print("Salam", "3likom") # it works because we gave two args to the function call
+print("Only one arg") # there will be a compilation error because we only gave one arg to the function call but you need two
+```
+
+Another important thing to know about functions is that they can have a return value. In the previous examples there was no appearing return value in those functions but let's try it out.
+
+- ex in python of function return value concept:
+```python
+def return_1_func(): # this func has no params
+	return 1 # there is no instructions apart from the 'return', we say that the func returns 1
+	
+def double_value(the_int) # there is one param named 'the_int'
+	return the_int * 2 # there is no instructions apart from the 'return', it returns the double of the_int param
+	
+print(return_1_func()) # this func call "transforms" to print(1)
+print(double_value(2)) # this func call "transforms" to print(4)
+```
+
+You should see '1' then '4' displayed in the terminal.
 
 ---
+**Variables:** a variable is a space dedicated to containing a piece of data, ex: a variable named 'ex_var' contains the number 2, print(ex_var) = "2 is printed".
 
+- ex in python:
+```python
+ex_var = 7
+print(ex_var)
+```
+
+An important thing to know in programming is that in general variables have three main types possible (data types), the three most known ones:
+- decimal number, negative or positive (integer)
+- sequence of literal characters (string)
+- only two value possible, true or false (boolean)
+
+- ex in python of the three types:
+```python
+ex_string = "you need double quotes or simple quotes to make strings"
+ex_integer = 77 # an integer
+ex_boolean = true # true or false value
+```
+
+- ex in python of changing variable value:
+```python
+ex_var = 93 # ex_var is declared and initialised here
+print(ex_var)
+ex_var = 77 # we changed the value here
+print(ex_var)
+```
+
+You should see '93' and then '77' displayed in terminal.
+
+---
 **Syntax:** when you code you obviously choose a programming language (python, c, rust...), and each of those languages has its own syntax, you write with a unique way for each language, let's make a printA function that actually prints A in the terminal with 3 languages.
 
 - ex in python:
-
 ```python
 def printA():
 	print("A")
 ```
 
 - ex in c:
-
 ```c
 void printA()
 {
@@ -235,7 +310,6 @@ void printA()
 ```
 
 - ex in lua:
-
 ```lua
 function printA()
 	print("A")
@@ -245,82 +319,73 @@ end
 You see that each language has a different way to write functions with their block of instructions, that is a syntax demonstration, each language has its own way to write code.
 
 ---
-
-**Variables:** a variable is a space dedicated to containing a piece of data, ex: a variable named 'var' contains the number 2, print(var) = 2 is printed.
+**Libraries:** libraries are some sets of functions that you can import and then reuse for your own code. Do you remember the print() function in python ? It comes from the "standard python library" which is already included in your script but you can import other libraries as you wish by doing it manually.
 
 - ex in python:
-
 ```python
-var = 7
-print(var)
+import math # we import the module 'math' of python (those are named modules in python but for now assimilate them as libraries)
+
+print(math.sqrt(4))
 ```
 
-- ex in c:
-
-```c
-int main()
-{
-	int var = 7;
-	printf("%d\n", var);
-}
-```
-
-- ex in lua:
-
-```lua
-var = 7
-print(var)
-```
+Now you should see the square root of 4 displayed in your terminal which is 2. Notice that the block of instructions of function 'sqrt' from 'math' library is actually contained in the library.
 
 ---
-
-**Comments:** comments are used to write text in your code without being interpreted by the compiler, it is ignored by everything.
+**Operators:** operators are essential to you if you want to code. Let's see a list of them with examples for you to understand.
 
 - ex in python:
-
 ```python
-# the call to this function displays A in the terminal
-print("A")
+ex_var = 77 
+print(ex_var == 77) # we will print the result of the operation which is a boolean type result
 ```
 
-- ex in c:
-
-```c
-int main()
-{
-	// nothing is done here
-}
-```
-
-- ex in lua:
-
-```lua
-var = 1
--- this function adds one to the var variable
-function add_one_to_var()
-	var = var + 1
-end
--- normally we should see 1 then 2 displayed in the terminal
-print(var)
-add_one_to_var()
-print(var)
-```
+You should see 'True' displayed in your terminal, but why ? Operators return values like function, take the example of the '+' operator between two integers, 2 + 2 = 4 and 4 is the return value. The '\==' operator looks if two values are equal and returns true or false rather the two are equal, or not. So now if you have understood well the concept, we can enumerate them:
+- '\==': checks if two values (operands) are equal, it returns a boolean.
+- '\!=': checks if two values (operands) are different from each other, it returns a boolean.
+- '<': checks if the first value is inferior to the second one, it returns a boolean.
+- '>': checks if the first value is superior to the second one, it returns a boolean.
+- '<=': checks if the first value is inferior or equal to the second one, it returns a boolean.
+- '>=': checks if the first value is superior or equal to the second one, it returns a boolean.
+- all of the mathematics base operators: '+-/\*' .
+- and others more subtle and that you will discover on your own.
 
 ---
+**Conditions:** as the definition of the word says, if the condition is 'true' then you execute the wanted code.
 
-**Arguments and Parameters:** i will illustrate this with an example, if i want to go on a jog outside i need to wear shoes, the shoes are the parameter, now if i go jog outside with some nike shoes, the nike shoes are the argument, the difference is really subtle. For example functions can have parameters and when you call those function you need to list an argument for each parameter to have.
-
-- ex in python:
-
+ex in python:
 ```python
-# num_param and text_param are parameters
-def ex_func(num_param, text_param):
-	print(num_param)
-	print(text_param)
-	
-# 77 and "Meaux" are arguments of the function call of ex_func
-ex_func(77, "Meaux")
+ex_var = 5
+if ex_var == 5 : # we write the condition if x is equal to 5
+	print("ex_var is equal to 5") # if the cond is true then we print the message
 ```
+
+You should see "x is equal to 5" displayed in your terminal because the condition 'x == 5' returns true. You can put instructions to execute if the condition is true but what if the condition is false and you also want to execute some instructions in this case ? Well you can with the 'else' keyword.
+
+ex in python:
+```python
+ex_var = 77
+if ex_var < 75 : # if ex_var is inferior to 75
+	print("ex_var is inferior to 75") # then we print this message
+else : # else, this means ex_var is not inferior to 75
+	print("ex_var is superior of equal to 75") # then we do this instead
+```
+
+As you may imagine, "ex_var is superior of equal to 75" will be displayed in the terminal. Let's go a step further, let's introduce the 'else if' concept with an example.
+
+ex in python:
+```python
+ex_var = 2
+if ex_var == 0 :
+	print("ex_var is equal to 0")
+elif ex_var == 1 :
+	print("ex_var is equal to 1")
+elif ex_var == 2 :
+	print("ex_var is equal to 2")
+else :
+	print("ex_var doesn't match any wanted cases")
+```
+
+Here you can see how we can for example manage multiple cases with if/else statements (elif = else if). The actual program will display "ex_var is equal to 2".
 
 ---
 
