@@ -173,7 +173,6 @@ $ ls                             (check the files in the cwd)
 some files                       (the directory A_Directory has been successfully removed)
 $ new empty line
 ```
-
 ### Coding mandatory notions
 How do we code now ? To start coding you need some basic knowledge to then transform your ideas into real code.
 
@@ -252,7 +251,7 @@ ex_var = 7
 print(ex_var)
 ```
 
-An important thing to know in programming is that in general variables have three main types possible (data types), the three most known ones:
+An important thing to know in coding is that in general variables have three main types possible (data types), the three most known ones:
 - decimal number, negative or positive (integer)
 - sequence of literal characters (string)
 - only two value possible, true or false (boolean)
@@ -274,7 +273,7 @@ print(ex_var)
 
 You should see '93' and then '77' displayed in terminal. Alright this is all good but now let's talk about a special variable type, arrays. An array is a list of variables; strings, numbers, booleans, whatever type you want, but it must contain elements of the same type only.
 
-ex in python:
+- ex in python:
 ```python
 ex_array = [0, 2, 4] # this is an array.
 # indexes:  0  1  2
@@ -284,7 +283,7 @@ print(ex_array[1]) # it will display '2' in the terminal
 As you can see, array elements are principally accessed by indexes and the first index is not 1 but it is 0.
 
 ---
-**Syntax:** when you code you obviously choose a programming language (python, c, rust...), and each of those languages has its own syntax, you write with a unique way for each language, let's make a printA function that actually prints A in the terminal with 3 languages.
+**Syntax:** when you code you obviously choose a coding language (python, c, rust...), and each of those languages has its own syntax, you write with a unique way for each language, let's make a printA function that actually prints A in the terminal with 3 languages.
 
 - ex in python:
 ```python
@@ -321,6 +320,21 @@ print(math.sqrt(4))
 
 Now you should see the square root of 4 displayed in your terminal which is 2. Notice that the block of instructions of function 'sqrt' from 'math' library is actually contained in the library.
 
+- ex in c:
+```c
+#include "my_lib.h" // note that this "include" gives us only the declarations of the functions (the fact that they exist), but to make everything work we need all of those functions source code
+
+int main()
+{
+	my_lib_func(); // call to a function of the lib
+}
+```
+
+In this example for your script to work you need to compile your file with the library because the library contains all the source code of the functions you are including:
+```
+$ gcc my_file.c /path/to/my_lib.a
+```
+
 ---
 **Operators:** operators are essential to you if you want to code. Let's see a list of them with examples for you to understand.
 
@@ -343,7 +357,7 @@ You should see 'True' displayed in your terminal, but why ? Operators return val
 ---
 **Conditions:** as the definition of the word says, if the condition is 'true' then you execute the wanted code.
 
-ex in python:
+- ex in python:
 ```python
 ex_var = 5
 if ex_var == 5 : # we write the condition if x is equal to 5
@@ -352,7 +366,7 @@ if ex_var == 5 : # we write the condition if x is equal to 5
 
 You should see "x is equal to 5" displayed in your terminal because the condition 'x == 5' returns true. You can put instructions to execute if the condition is true but what if the condition is false and you also want to execute some instructions in this case ? Well you can with the 'else' keyword.
 
-ex in python:
+- ex in python:
 ```python
 ex_var = 77
 if ex_var < 75 : # if ex_var is inferior to 75
@@ -363,7 +377,7 @@ else : # else, this means ex_var is not inferior to 75
 
 As you may imagine, "ex_var is superior of equal to 75" will be displayed in the terminal. Let's go a step further, let's introduce the 'else if' concept with an example.
 
-ex in python:
+- ex in python:
 ```python
 ex_var = 2
 if ex_var == 0 : # case of ex_var equal to 0
@@ -381,7 +395,7 @@ Here you can see how we can for example manage multiple cases with if/else state
 ---
 **Loops:** loops permit you to repeat instructions while a condition is true.
 
-ex in python of 'while loops':
+- ex in python of 'while loops':
 ```python
 ex_var = 0
 while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
@@ -391,13 +405,104 @@ while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
 
 Here you will see '0', '1', '2', '3' and '4' displayed in the terminal. Now let's jump into another type of loops:
 
-ex in c of 'for loops':
+- ex in c of 'for loops':
 ```python
 ex_var = -78
 for ex_var in range(5)
 	print(ex_var)
 ```
 
-You should see the same output as before in the terminal, but why ? For loops are special but not hard to understand at the same time, in the example above we say for each value of 'ex_var' reinitialized at 0 at the beginning between 0 and 4, we execute the block of instructions of the for loop, actually it was displaying the value of 'ex_var' in the terminal.
+You should see the same output as before in the terminal, but why ? For loops are special but not hard to understand at the same time, in the example above we say for each value of 'ex_var' reinitialized at 0 at the beginning between 0 and 4, we execute the block of instructions of the for loop, actually it was displaying the value of 'ex_var' in the terminal. For now don't bother on for loops, focus on while loops to clearly understand the concept.
+### Practice
+Your read and learned a lot in the previous section, but there was nearly no practice and practice is the only way to become efficient with the use of all those diverse and rich coding concepts. The format for those practices sequences will be a little bit special, there will be no coding, just textual resolution of some problems but including coding concepts. We chose python syntax because we used it a lot throughout the Coding mandatory notions section. Your goal will be at first to try to understand the block of codes given, and later it will be the contrary, you will try to write them.
 
---- 
+**Analyze part:** we want you to try to understand what will be the outputs of the below scripts.
+- ex in python:
+```python
+print("example")
+```
+
+In this block of code you should have understood that "example" will be displayed in your terminal.
+
+- ex in python:
+```python
+ex_var = 93
+print(ex_var)
+ex_var = 77
+print(ex_var)
+ex_var = ex_var + 1
+print(ex_var)
+```
+
+In this block of code you should have understood that '93', '77' and '78' will be displayed in your terminal.
+
+- ex in python:
+```python
+ex_var = 75
+if ex_var == 77 :
+	print("Seine-et-Marne")
+elif ex_var == 75 :
+	print("Paris")
+else :
+	print("Nothing matches")
+```
+
+In this block of code you should have understood that "Paris" will be displayed in your terminal.
+
+- ex in python:
+```python
+ex_var = 0
+while ex_var != 4 : # hint: while i != 4 = while i is different from 4
+	print(ex_var)
+	ex_var += 1 # ex_var += 1 is the same as ex_var = ex_var + 1
+```
+
+In this block of code you should have understood that '0', '1', '2' and '3' will be displayed in your terminal.
+
+- ex in python:
+```python
+def ex_func(param1, param2)
+	print(param1)
+	print(param2)
+	
+ex_func("Salam3likom")
+```
+
+In this block of code you should have understood that there will be a compilation error because you gave only one argument to the function call, but the function has 2 parameters.
+
+---
+**Resolve part:** we want you to complete the scripts below.
+- ex in python: 
+```python
+ex_var = 0
+# Complete this script to display "SALAM" in the terminal if 'ex_var' is equal to 75
+```
+
+You should have completed this script with a simple if statement to display "SALAM" if the condition 'ex_var == 75' is true.
+
+- ex in python:
+```python
+ex_var = 0
+# Complete this script to display '0', '2', '4', and '6' in the terminal with the help of a while loop
+```
+
+You should have written a simple while loop with for example this condition: 'ex_var != 8' and you increment 'ex_var' by 2 for each iteration in the loop and just before this you print 'ex_var' value. So what happens is that when 'ex_var' is incremented by 2 and is finally equal to 8 the loop stops and you displayed what we wanted.
+
+- ex in python:
+```python
+# Complete this script for it to work and display "Salam3likom in the terminal"
+my_func("Salam3likom")
+```
+
+You should have written a function named 'my_func' with one parameter and the block of instructions should contain just one instruction to display the parameter like 'print(param_name)'.
+
+- ex in python:
+```python
+# Complete this script for it to work, hint: remember the use of libraries can let you use a lot of other builtin functions.
+print(math.sqrt(9))
+```
+
+You should have written just "import math" at the top of your script to make the module available for your use of it, and then you should see '3' displayed in your terminal because 'sqrt(9)' stands for 'square root of 9'.
+### Conclusion
+In this lesson about the basics of coding you learned the fundamentals to now start to learn the languages that you want, the goal of this lesson was really to put the emphasis on the basic understanding of practically all of the concepts you will face when you code and you learn a new coding language.
+We hope you're ready for your long journey of coding ! ✅.k
