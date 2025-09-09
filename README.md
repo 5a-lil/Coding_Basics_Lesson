@@ -396,6 +396,7 @@ Here you can see how we can for example manage multiple cases with if/else state
 **Loops:** loops permit you to repeat instructions while a condition is true.
 
 - ex in python of 'while loops':
+
 ```python
 ex_var = 0
 while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
@@ -505,4 +506,4 @@ print(math.sqrt(9))
 You should have written just "import math" at the top of your script to make the module available for your use of it, and then you should see '3' displayed in your terminal because 'sqrt(9)' stands for 'square root of 9'.
 ### Conclusion
 In this lesson about the basics of coding you learned the fundamentals to now start to learn the languages that you want, the goal of this lesson was really to put the emphasis on the basic understanding of practically all of the concepts you will face when you code and you learn a new coding language.
-We hope you're ready for your long journey of coding ! ✅.k
+We hope you're ready for your long journey of coding ! ✅
