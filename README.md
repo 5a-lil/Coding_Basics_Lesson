@@ -41,7 +41,7 @@ The thing is that through shell you can do a lot of things like move to a direct
 $ cd <paths to new working directory>
 ```
 
-ex: 
+- ex: 
 ```
 $ cd ./file
 $ pwd
@@ -112,7 +112,7 @@ $ new empty line
 
 So in this section you learnt how to compile and execute your code and that's awesome because you can actually start coding ! But before that lets deep again in more shell basics and habits that you use often while coding.
 ### Shell quick practice
-Lets see some useful scenarios that might happen.
+Lets see some useful scenarios that might happen:
 
 - Imagine you want to create a My_Proj folder for your project and create a main.lua file in it:
 ```
