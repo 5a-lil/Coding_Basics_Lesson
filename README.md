@@ -396,7 +396,6 @@ Here you can see how we can for example manage multiple cases with if/else state
 **Loops:** loops permit you to repeat instructions while a condition is true.
 
 - ex in python of 'while loops':
-
 ```python
 ex_var = 0
 while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
