@@ -20,11 +20,11 @@ I'm gonna teach you some little terms and things to know and understand.
 - paths: when we use the word 'path' in computer science we mean the file path to a certain file, ex: the path to your project is maybe /home/user_name/your_project. 
 - absolute path: a path starting from the bottom of your file architecture, ex: /from/the/beginning.
 - relative path: a path starting from the current working directory, ex: if your current working directory is /current/working/directory, the relative path ./file = /current/working/directory/file.
-- shell: shell is a coding language but it also refers to a terminal, when we say "open a shell" it basically means "open a terminal".
+- shell: Shell is a coding language but it also refers to a terminal, when we say "open a shell" it basically means "open a terminal".
 - execute a file: in a shell, just write the relative/absolute path of the file and press enter and it will execute the binary file. For commands which are all actually binary files in the /bin directory you can execute them without any path but avoid this for now.
 - file extensions: any .something extension after a file name is just literal, it doesn't do anything to the file, the thing to remember for now is that you need file extensions for mostly compilers, because a compiler will always inspect if the file contains actually the good language to compile and that's the literal role of a file extension. Because compiling something that you cannot understand doesn't make any sense.
 
-Now lets go through some shell basics you'll nearly use every time while coding and to test. First open a shell, so now you're on an interface like this: 
+Now lets go through some Shell basics you'll nearly use every time while coding and to test. First open a shell, so now you're on an interface like this: 
 ```bash
 $ you type commands here
 ```
@@ -36,7 +36,7 @@ $ pwd
 $ new empty line
 ```
 
-The thing is that through shell you can do a lot of things like move to a directory/bin, copy data, but mostly you can compile files by using some respective commands for each existent compiler that you have installed. When you are in a shell as you saw with the 'pwd' command your are by default in the directory where you opened the shell, but you can change of current working directory with the 'cd' command:
+The thing is that through Shell you can do a lot of things like move to a directory/bin, copy data, but mostly you can compile files by using some respective commands for each existent compiler that you have installed. When you are in a shell as you saw with the 'pwd' command your are by default in the directory where you opened the shell, but you can change of current working directory with the 'cd' command:
 ```
 $ cd <paths to new working directory>
 ```
@@ -110,7 +110,7 @@ Hello i want to code
 $ new empty line
 ```
 
-So in this section you learnt how to compile and execute your code and that's awesome because you can actually start coding ! But before that lets deep again in more shell basics and habits that you use often while coding.
+So in this section you learnt how to compile and execute your code and that's awesome because you can actually start coding ! But before that lets deep again in more Shell basics and habits that you use often while coding.
 ### Shell quick practice
 Lets see some useful scenarios that might happen:
 
@@ -178,13 +178,13 @@ How do we code now ? To start coding you need some basic knowledge to then trans
 
 **Comments:** comments are used to write text in your code without being interpreted by the compiler, it is ignored by everything.
 
-- ex in python:
+- ex in Python:
 ```python
 # this is the python way to make comments in a script
 print("A")
 ```
 
-- ex in c:
+- ex in C:
 ```c
 int main()
 {
@@ -192,7 +192,7 @@ int main()
 }
 ```
 
-- ex in lua:
+- ex in Lua:
 ```lua
 -- this is the lua way to make comments in a script
 ```
@@ -200,12 +200,12 @@ int main()
 ---
 **Functions:** a function is a block of code that executes all of the instructions contained in the actual block.
 
-- ex in python of a builtin function:
+- ex in Python of a builtin function:
 ```python
 print("I will code") # this is a call to the print func
 ```
 
-- ex in python of a "homemade" function:
+- ex in Python of a "homemade" function:
 ```python
 # we define our function
 def print_value_plus_one(value): # 'value' is called a parameter
@@ -216,7 +216,7 @@ print_value_plus_one(0) # '0' is called the argument of the func call
 
 This is a call to the 'print()' function of python, but we didn't code the function, it was already coded so we don't have access to the block of instructions, but in the second example we coded our own function and the call to it displays 1 in the terminal. Note that functions can have a number of parameters balancing between 0 and a lot.
 
-- ex in python of a possible compile error:
+- ex in Python of a possible compile error:
 ```python
 def print_two_words(word1, word2):
 	print(word1) # prints the first parameter
@@ -228,7 +228,7 @@ print("Only one arg") # there will be a compilation error because we only gave o
 
 Another important thing to know about functions is that they can have a return value. In the previous examples there was no appearing return value in those functions but let's try it out.
 
-- ex in python of function return value concept:
+- ex in Python of function return value concept:
 ```python
 def return_1_func(): # this func has no params
 	return 1 # there is no instructions apart from the 'return', we say that the func returns 1
@@ -245,7 +245,7 @@ You should see '1' then '4' displayed in the terminal.
 ---
 **Variables:** a variable is a space dedicated to containing a piece of data, ex: a variable named 'ex_var' contains the number 2, print(ex_var) = "2 is printed".
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 7
 print(ex_var)
@@ -256,14 +256,14 @@ An important thing to know in coding is that in general variables have three mai
 - sequence of literal characters (string)
 - only two value possible, true or false (boolean)
 
-- ex in python of the three types:
+- ex in Python of the three types:
 ```python
 ex_string = "you need double quotes or simple quotes to make strings"
 ex_integer = 77 # an integer
 ex_boolean = true # true or false value
 ```
 
-- ex in python of changing variable value:
+- ex in Python of changing variable value:
 ```python
 ex_var = 93 # ex_var is declared and initialised here
 print(ex_var)
@@ -273,7 +273,7 @@ print(ex_var)
 
 You should see '93' and then '77' displayed in terminal. Alright this is all good but now let's talk about a special variable type, arrays. An array is a list of variables; strings, numbers, booleans, whatever type you want, but it must contain elements of the same type only.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_array = [0, 2, 4] # this is an array.
 # indexes:  0  1  2
@@ -285,13 +285,13 @@ As you can see, array elements are principally accessed by indexes and the first
 ---
 **Syntax:** when you code you obviously choose a coding language (python, c, rust...), and each of those languages has its own syntax, you write with a unique way for each language, let's make a printA function that actually prints A in the terminal with 3 languages.
 
-- ex in python:
+- ex in Python:
 ```python
 def printA():
 	print("A")
 ```
 
-- ex in c:
+- ex in C:
 ```c
 void printA()
 {
@@ -299,7 +299,7 @@ void printA()
 }
 ```
 
-- ex in lua:
+- ex in Lua:
 ```lua
 function printA()
 	print("A")
@@ -311,7 +311,7 @@ You see that each language has a different way to write functions with their blo
 ---
 **Libraries:** libraries are some sets of functions that you can import and then reuse for your own code. Do you remember the print() function in python ? It comes from the "standard python library" which is already included in your script but you can import other libraries as you wish by doing it manually.
 
-- ex in python:
+- ex in Python:
 ```python
 import math # we import the module 'math' of python (those are named modules in python but for now assimilate them as libraries)
 
@@ -320,7 +320,7 @@ print(math.sqrt(4))
 
 Now you should see the square root of 4 displayed in your terminal which is 2. Notice that the block of instructions of function 'sqrt' from 'math' library is actually contained in the library.
 
-- ex in c:
+- ex in C:
 ```c
 #include "my_lib.h" // note that this "include" gives us only the declarations of the functions (the fact that they exist), but to make everything work we need all of those functions source code
 
@@ -338,7 +338,7 @@ $ gcc my_file.c /path/to/my_lib.a
 ---
 **Operators:** operators are essential to you if you want to code. Let's see a list of them with examples for you to understand.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 77 
 print(ex_var == 77) # we will print the result of the operation which is a boolean type result
@@ -357,7 +357,7 @@ You should see 'True' displayed in your terminal, but why ? Operators return val
 ---
 **Conditions:** as the definition of the word says, if the condition is 'true' then you execute the wanted code.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 5
 if ex_var == 5 : # we write the condition if x is equal to 5
@@ -366,7 +366,7 @@ if ex_var == 5 : # we write the condition if x is equal to 5
 
 You should see "x is equal to 5" displayed in your terminal because the condition 'x == 5' returns true. You can put instructions to execute if the condition is true but what if the condition is false and you also want to execute some instructions in this case ? Well you can with the 'else' keyword.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 77
 if ex_var < 75 : # if ex_var is inferior to 75
@@ -377,7 +377,7 @@ else : # else, this means ex_var is not inferior to 75
 
 As you may imagine, "ex_var is superior of equal to 75" will be displayed in the terminal. Let's go a step further, let's introduce the 'else if' concept with an example.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 2
 if ex_var == 0 : # case of ex_var equal to 0
@@ -395,7 +395,7 @@ Here you can see how we can for example manage multiple cases with if/else state
 ---
 **Loops:** loops permit you to repeat instructions while a condition is true.
 
-- ex in python of 'while loops':
+- ex in Python of 'while loops':
 ```python
 ex_var = 0
 while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
@@ -405,7 +405,7 @@ while ex_var < 5 : # you loop on the instructions while ex_var is inferior to 5
 
 Here you will see '0', '1', '2', '3' and '4' displayed in the terminal. Now let's jump into another type of loops:
 
-- ex in c of 'for loops':
+- ex in C of 'for loops':
 ```python
 ex_var = -78
 for ex_var in range(5)
@@ -417,14 +417,14 @@ You should see the same output as before in the terminal, but why ? For loops ar
 Your read and learned a lot in the previous section, but there was nearly no practice and practice is the only way to become efficient with the use of all those diverse and rich coding concepts. The format for those practices sequences will be a little bit special, there will be no coding, just textual resolution of some problems but including coding concepts. We chose python syntax because we used it a lot throughout the Coding mandatory notions section. Your goal will be at first to try to understand the block of codes given, and later it will be the contrary, you will try to write them.
 
 **Analyze part:** we want you to try to understand what will be the outputs of the below scripts.
-- ex in python:
+- ex in Python:
 ```python
 print("example")
 ```
 
 In this block of code you should have understood that "example" will be displayed in your terminal.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 93
 print(ex_var)
@@ -436,7 +436,7 @@ print(ex_var)
 
 In this block of code you should have understood that '93', '77' and '78' will be displayed in your terminal.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 75
 if ex_var == 77 :
@@ -449,7 +449,7 @@ else :
 
 In this block of code you should have understood that "Paris" will be displayed in your terminal.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 0
 while ex_var != 4 : # hint: while i != 4 = while i is different from 4
@@ -459,7 +459,7 @@ while ex_var != 4 : # hint: while i != 4 = while i is different from 4
 
 In this block of code you should have understood that '0', '1', '2' and '3' will be displayed in your terminal.
 
-- ex in python:
+- ex in Python:
 ```python
 def ex_func(param1, param2)
 	print(param1)
@@ -472,7 +472,7 @@ In this block of code you should have understood that there will be a compilatio
 
 ---
 **Resolve part:** we want you to complete the scripts below.
-- ex in python: 
+- ex in Python: 
 ```python
 ex_var = 0
 # Complete this script to display "SALAM" in the terminal if 'ex_var' is equal to 75
@@ -480,7 +480,7 @@ ex_var = 0
 
 You should have completed this script with a simple if statement to display "SALAM" if the condition 'ex_var == 75' is true.
 
-- ex in python:
+- ex in Python:
 ```python
 ex_var = 0
 # Complete this script to display '0', '2', '4', and '6' in the terminal with the help of a while loop
@@ -488,7 +488,7 @@ ex_var = 0
 
 You should have written a simple while loop with for example this condition: 'ex_var != 8' and you increment 'ex_var' by 2 for each iteration in the loop and just before this you print 'ex_var' value. So what happens is that when 'ex_var' is incremented by 2 and is finally equal to 8 the loop stops and you displayed what we wanted.
 
-- ex in python:
+- ex in Python:
 ```python
 # Complete this script for it to work and display "Salam3likom in the terminal"
 my_func("Salam3likom")
@@ -496,7 +496,7 @@ my_func("Salam3likom")
 
 You should have written a function named 'my_func' with one parameter and the block of instructions should contain just one instruction to display the parameter like 'print(param_name)'.
 
-- ex in python:
+- ex in Python:
 ```python
 # Complete this script for it to work, hint: remember the use of libraries can let you use a lot of other builtin functions.
 print(math.sqrt(9))
